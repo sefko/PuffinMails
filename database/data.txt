@@ -1,0 +1,35 @@
+Users:
+                            FN          PASS_HASH           GroupId           Leader
+Драган        Пеевски       12          asdada
+Любомир       Тлаченски     112         gkhnvbc
+Иван          Иванов        512         ghggkfhhfhf         2
+Дойчин        Златаров      42          kghkghkgkg          
+Минаил        Златев        76          asdrutrutrada       2                  yes
+Хосе          Еспаниоло     6585        kghkgkghkg          1                  yes
+
+
+Contact list:
+Драган        Пеевски       -> Любомир Тлаченски, Иван Иванов 
+Любомир       Тлаченски     -> Иван Иванов 
+
+
+Message 1:
+sender: Драган Пеевски(1)
+receivers: Иван Иванов(3)
+Type: 0
+Title: Title #1
+Content: Message #1
+
+Message 2:
+sender: Любомир Тлаченски(2)
+receivers: Минаил Златев(5), Хосе Еспаниоло(6)
+Type: 1
+Title: Title #2
+Content: Message #2
+
+Message 3:
+sender: Иван Иванов(3)
+receivers: Драган Пеевски(1), Хосе Еспаниоло(6)
+Type: 2
+Title: Title #3
+Content: Message #3

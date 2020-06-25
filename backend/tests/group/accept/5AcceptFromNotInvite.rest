@@ -1,0 +1,1 @@
+GET http://localhost/Project/backend/group/accept.php?cookie=12&leader=76           HTTP/1.1

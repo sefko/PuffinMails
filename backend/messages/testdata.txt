@@ -1,0 +1,33 @@
+bool isPositiveInteger(string);
+bool isValidFilter(string);
+bool isMessageIdInUserInbox(msgId,user);
+
+View:
+    invalid cookie
+    valid cookie
+        invalid Id format
+        valid Id format
+            invalid Id
+            valid Id
+                message Id is not in inbox
+                message Id is in inbox
+                send message: success
+
+view.php?cookie=7000               InvalidCookie
+view.php?cookie=6585&id=-asdf      InvalidIdFormat
+view.php?cookie=6585&id=53         InvalidId
+view.php?cookie=6585&id=1          MsgIdNotInInbox
+view.php?cookie=6585&id=2          ViewSuccess
+
+
+Inbox:
+    invalid cookie
+    valid cookie
+            filter not in range
+            filter in range
+                show all messages in inbox using filter : success
+
+inbox.php?cookie=8000               InvalidCookie
+inbox.php?cookie=76&filter=asdf     InvalidFilterFormat
+inbox.php?cookie=76&filter=23       FilterNotInRange
+inbox.php?cookie=76&filter=1        InboxSuccess

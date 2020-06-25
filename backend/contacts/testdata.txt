@@ -1,0 +1,40 @@
+bool isUserInContacts(user,contact);
+
+Add:
+    invalid cookie
+    valid cookie
+        invalid user
+        valid user and not self
+            already in contacts
+            not in contacts 
+            add to contacts: success
+
+add.php?cookie=                InvalidCookie
+add.php?cookie=12&user=asd     InvalidUser
+add.php?cookie=12&user=12      UserSelf
+add.php?cookie=12&user=512     AlreadyInContacts
+add.php?cookie=12&user=76      AddSuccess
+
+
+Remove:
+    invalid cookie
+    valid cookie
+        invalid user
+        valid user and not self
+            not in contacts
+            already in contacts 
+            remove user: success
+
+remove.php?cookie=ads              InvalidCookie
+remove.php?cookie=112&user=100     InvalidUser
+remove.php?cookie=112&user=112     UserSelf
+remove.php?cookie=112&user=12      NotInContacts
+remove.php?cookie=112&user=521     RemoveSuccess
+
+All:
+    invalid cookie
+    valid cookie 
+    show all: success
+
+all.php?cookie=-5                  InvalidCookie
+all.php?cookie=12                  AllSuccess

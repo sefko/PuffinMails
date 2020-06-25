@@ -1,0 +1,2 @@
+
+GET http://localhost/Project/backend/group/removeGroup.php?cookie=8362      HTTP/1.1

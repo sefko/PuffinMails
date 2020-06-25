@@ -1,0 +1,101 @@
+bool isInGroup(user);
+bool isLeader(user);
+
+
+Create:
+    invalid cookie
+    valid cookie
+        already in group
+        not in a group
+            creates a group and becomes leader : success
+
+create.php?cookie=1000         InvalidCookie
+create.php?cookie=512          InGroup
+create.php?cookie=42           CreateSuccess
+
+Invite:
+    invalid cookie
+    valid cookie
+        not in a group
+        already in group
+            not leader
+            leader
+                invalid user
+                valid user 
+                invite user: success
+
+invite.php?cookie=2000                 InvalidCookie
+invite.php?cookie=12                   NotInGroup
+invite.php?cookie=512                  NotLeader
+invite.php?cookie=6585&user=-asdf      InvalidUser
+invite.php?cookie=6585&user=12         InviteSuccess
+
+Accept:
+    invalid cookie
+    valid cookie
+        already in group
+        not in a group
+            leader field is not valid user
+            leader field is valid user
+                leader field is not a leader
+                leader field is leader 
+                accept invite: success
+
+accept.php?cookie=3000                 InvalidCookie
+accept.php?cookie=76                   AlreadyInGroup
+accept.php?cookie=12&leader=200        LeaderNotValidUser
+accept.php?cookie=12&leader=512        NotALeader
+accept.php?cookie=12&leader=76         AcceptFromNonInvite
+accept.php?cookie=12&leader=6585       AcceptSuccess
+
+Leave:
+    invalid cookie
+    valid cookie
+        not in a group
+        already in group
+            leader
+            not the leader
+                leave group : success
+
+leave.php?cookie=4000                  InvalidCookie
+leave.php?cookie=112                   NotInGroup
+leave.php?cookie=42                    IsLeader
+leave.php?cookie=12                    LeaveSuccess
+
+Remove:
+    invalid cookie
+    valid cookie
+        not in group   
+        already in group
+            not the leader 
+            is the leader
+                invalid user
+                valid user
+                    user not in this group
+                    user in this group
+                        user self
+                        user not self
+                        remove user : success
+
+remove.php?cookie=4000                  InvalidCookie
+remove.php?cookie=112                   CookieNotInGroup
+remove.php?cookie=512                   NotTheLeader
+remove.php?cookie=76&user=-asdf         InvalidUser
+remove.php?cookie=76&user=12            UserNotInGroup
+remove.php?cookie=76&user=6585          DifferentGroups
+remove.php?cookie=76&user=76            UserSelf
+remove.php?cookie=76&user=512           RemoveSuccess
+
+Remove group:
+    invalid cookie
+    valid cookie
+        not in group   
+        already in group
+            not the leader 
+            is the leader
+            remove group : success
+
+removeGroup.php?cookie=6000            InvalidCookie
+removeGroup.php?cookie=112             NotInGroup
+removeGroup.php?cookie=8362            NotLeader
+removeGroup.php?cookie=6585            RemoveGroupSuccess

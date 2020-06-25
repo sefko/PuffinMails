@@ -1,0 +1,2 @@
+
+GET http://localhost/Project/backend/messages/view.php?cookie=6585&id=-12       HTTP/1.1

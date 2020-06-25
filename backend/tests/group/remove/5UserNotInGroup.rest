@@ -1,0 +1,1 @@
+GET http://localhost/Project/backend/group/remove.php?cookie=76&user=12       HTTP/1.1

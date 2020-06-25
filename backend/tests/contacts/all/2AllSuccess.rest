@@ -1,0 +1,2 @@
+
+GET http://localhost/Project/backend/contacts/all.php?cookie=12      HTTP/1.1

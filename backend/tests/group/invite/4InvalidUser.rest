@@ -1,0 +1,2 @@
+
+GET http://localhost/Project/backend/group/invite.php?cookie=6585&user=-asdf         HTTP/1.1

@@ -1,0 +1,3 @@
+
+GET http://localhost/Project/backend/group/remove.php?cookie=76&user=-asdf      HTTP/1.1
+

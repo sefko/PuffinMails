@@ -1,0 +1,2 @@
+
+GET http://localhost/Project/backend/messages/inbox.php?cookie=76&filter=23        HTTP/1.1
